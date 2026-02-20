@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World's Greatest Cafe Management</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>☕ World's Greatest Cafe Management System</h1>
+    <p>Realtime authentication, live activity feed, menu and orders.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Authentication</h2>
+      <div id="auth-status"></div>
+      <form id="register-form">
+        <input name="name" placeholder="Name" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <input name="password" type="password" placeholder="Password" required />
+        <button>Register</button>
+      </form>
+      <form id="login-form">
+        <input name="email" type="email" placeholder="Email" required />
+        <input name="password" type="password" placeholder="Password" required />
+        <button>Login</button>
+      </form>
+      <button id="logout-btn">Logout</button>
+      <h3>Realtime Auth Feed</h3>
+      <ul id="auth-feed"></ul>
+    </section>
+
+    <section>
+      <h2>Menu Management</h2>
+      <form id="menu-form">
+        <input name="item_name" placeholder="Item name" required />
+        <input name="category" placeholder="Category" required />
+        <input name="price" type="number" min="1" step="0.01" placeholder="Price" required />
+        <button>Add menu item</button>
+      </form>
+      <ul id="menu-list"></ul>
+    </section>
+
+    <section>
+      <h2>Order Management</h2>
+      <form id="order-form">
+        <input name="menu_item_id" type="number" min="1" placeholder="Menu item ID" required />
+        <input name="quantity" type="number" min="1" placeholder="Quantity" required />
+        <button>Place order</button>
+      </form>
+      <ul id="order-list"></ul>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
